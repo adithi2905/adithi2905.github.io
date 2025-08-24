@@ -13,7 +13,6 @@
       line-height: 1.7;
       color: #e4e4e7;
     }
-    
 
     /* Navbar */
     .navbar {
@@ -25,19 +24,15 @@
       padding: 12px;
       box-shadow: 0 8px 20px rgba(38, 3, 71, 0.3);
     }
-
     .navbar a {
-      color: #00BCF2; /* Edge Cyan */
+      color: #00BCF2;
       margin: 0 20px;
       text-decoration: none;
       font-weight: 500;
       font-size: 1rem;
       transition: color 0.3s ease;
     }
-
-    .navbar a:hover {
-      color: #8A2BE2; /* Purple */
-    }
+    .navbar a:hover { color: #8A2BE2; }
 
     /* Section Titles */
     h2 {
@@ -45,33 +40,24 @@
       margin-bottom: 20px;
       border-bottom: 1px solid #2f2f2f;
       padding-bottom: 8px;
-      background: linear-gradient(90deg, #00BCF2, #8A2BE2); /* Edge cyan to Purple gradient */
+      background: linear-gradient(90deg, #00BCF2, #8A2BE2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-     h3  {
+    h3  {
       font-size: 2rem;
       margin-bottom: 20px;
       border-bottom: 1px solid #2f2f2f;
       padding-bottom: 8px;
-      background: linear-gradient(90deg, #00BCF2, #8A2BE2); /* Edge cyan to Purple gradient */
+      background: linear-gradient(90deg, #00BCF2, #8A2BE2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
+    .section { margin-bottom: 60px; }
+    #about p { font-size: 1rem; margin-bottom: 15px; color: #d4d4d8; }
 
-
-    .section {
-      margin-bottom: 60px;
-    }
-
-    #about p {
-      font-size: 1rem;
-      margin-bottom: 15px;
-      color: #d4d4d8;
-    }
-
-    /* Card Styling */
+    /* Cards */
     .experience, .project {
       background: rgba(26, 26, 26, 0.95);
       border-radius: 16px;
@@ -83,7 +69,6 @@
         0 8px 16px rgba(0, 188, 242, 0.15);
       transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
-
     .experience:hover, .project:hover {
       transform: translateY(-6px) scale(1.02);
       box-shadow:
@@ -91,7 +76,6 @@
         0 18px 40px rgba(0, 188, 242, 0.25),
         0 10px 24px rgba(138, 43, 226, 0.3);
     }
-
     .experience h3, .project h3 {
       font-size: 1.4rem;
       margin-bottom: 8px;
@@ -109,26 +93,10 @@
       margin-bottom: 12px;
       align-items: center;
     }
-
-    .meta span {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .meta span::before {
-      font-family: "Segoe UI Symbol", sans-serif;
-      content: "🏢";
-      margin-right: 4px;
-    }
-
-    .meta .location::before {
-      content: "📍";
-    }
-
-    .meta .date::before {
-      content: "📅";
-    }
+    .meta span { display: flex; align-items: center; gap: 6px; }
+    .meta span::before { font-family: "Segoe UI Symbol", sans-serif; content: "🏢"; margin-right: 4px; }
+    .meta .location::before { content: "📍"; }
+    .meta .date::before { content: "📅"; }
 
     .experience ul, .project ul {
       list-style-type: disc;
@@ -137,7 +105,7 @@
       font-size: 0.96rem;
     }
 
-    /* Pill Badges */
+    /* Pills & badges */
     .pill {
       display: inline-block;
       background: linear-gradient(135deg, #1f2937, #3b3b3b);
@@ -148,16 +116,9 @@
       margin: 4px 8px 10px 0;
       box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.1);
     }
+    .pill:nth-child(2n) { color: #8A2BE2; }
 
-    .pill:nth-child(2n) {
-      color: #8A2BE2; /* Purple alternate */
-    }
-
-    /* Tech Stack Badges */
-    .tech-stack {
-      margin-top: 10px;
-    }
-
+    .tech-stack { margin-top: 10px; }
     .tech-stack span {
       display: inline-block;
       background: linear-gradient(135deg, #27272a, #3a3a3c);
@@ -169,7 +130,7 @@
       box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.05);
     }
 
-    .repo-link {
+    .repo-link, .ext-link {
       display: inline-block;
       color: #00BCF2;
       font-weight: 600;
@@ -177,65 +138,68 @@
       margin-top: 12px;
       font-size: 0.95rem;
     }
+    .repo-link:hover, .ext-link:hover { color: #8A2BE2; }
 
-    .repo-link:hover {
-      color: #8A2BE2; /* Purple hover */
+    /* Hero */
+    .hero { display: flex; justify-content: space-between; padding: 40px; gap: 20px; }
+    .hero-description h1 { margin: 0 0 6px 0; }
+    .hero-description h3 { border: 0; margin: 6px 0 10px; }
+    .hero-description h4 { margin: 0; font-weight: 500; color: #c9c9cf; }
+    .hero-image img {
+      width: 280px; height: 280px; object-fit: cover; border-radius: 50%;
+      border: 6px solid transparent;
+      background: linear-gradient(45deg, #0078D7, #00A1F1, #6A5ACD);
+      background-clip: padding-box;
     }
 
-    .hero {
-  display: flex;
-  align-items: right;
-  justify-content: space-between;
-  padding: 40px;
-  gap: 20px;
-}
+    /* Thumbnails */
+    .thumbs { display:flex; gap:10px; margin-top:10px; flex-wrap:wrap; }
+    .thumbs img { width:64px; height:64px; object-fit:cover; border-radius:8px; opacity:.9; }
+    .thumbs img:hover { opacity:1; transform:scale(1.03); transition:.2s ease; }
 
-.hero-text {
-  max-width: 60%;
-  align-items:right;
-}
+    /* External links list */
+    .ext-links { margin-top:10px; }
+    .ext-links a { margin-right:18px; }
 
-.hero-title {
-  font-size: 2.8rem;
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-
-.hero-subtitle {
-  font-size: 2rem;
-  margin-bottom: 12px;
-}
-
-.gradient-text {
-  background: linear-gradient(90deg, #0078D7, #00A1F1); 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  font-weight: bold;
-  animation: gradientShift 4s ease infinite;
-}
-
-.hero-description {
-  font-size: 1.2rem;
-  color: #ccc;
-  line-height: 1.5;
-}
-
-/* Image Styling */
-.hero-image img {
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 6px solid transparent;
-  background: linear-gradient(45deg, #0078D7, #00A1F1, #6A5ACD);
-  background-size: auto;
-
-  background-clip: padding-box;
-  
-}
-
+    /* Publications grid */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .article-card a.title {
+      display:block;
+      font-weight:700;
+      font-size:1.05rem;
+      color:#e4e4e7;
+      text-decoration:none;
+      margin-top:10px;
+    }
+    .article-card a.title:hover { color:#8A2BE2; }
+    .article-card .role {
+      font-size:.85rem;
+      color:#a1a1aa;
+      margin-top:6px;
+    }
+    .article-thumb {
+      width:100%;
+      height:140px;
+      object-fit:cover;
+      border-radius:12px;
+      border:1px solid #2f2f2f;
+      background:#111;
+    }
+    .no-thumb {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      height:140px;
+      border-radius:12px;
+      border:1px dashed #333;
+      color:#a1a1aa;
+      background:linear-gradient(135deg,#141414,#1f1f1f);
+    }
   </style>
 </head>
 <body>
@@ -244,68 +208,68 @@
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
+    <a href="#others">Leadership & Extracurriculars</a>
+    <a href="#publications">Publications & Articles</a>
+  
   </div>
 
-  <!-- About Me -->
-   <div>
-   <div class="hero">
-  <div class="hero-description">
-  <h1>Hi, I’m Adithi Varadarajan</h1>
-  <h3>Software Engineer & Product-focused backend architect</h3>
-<h4>Building scalable backend systems, cloud-native applications, and integrating AI/ML models into production-ready platforms</h4></div>
-<div class="hero-image">
-    <img src="img.jpg">
+  <!-- About -->
+  <div class="hero">
+    <div class="hero-description">
+      <h1>Hi, I’m Adithi Varadarajan</h1>
+      <h3>Software Engineer & Product-focused backend architect</h3>
+      <h4>Building scalable backend systems, cloud-native applications, and integrating AI/ML models into production-ready platforms</h4>
     </div>
-  
-</div>
-  
-  </div></div><hr><br><br>
+    <div class="hero-image">
+      <img src="img.jpg" alt="Adithi headshot">
+    </div>
+  </div>
+
+  <hr><br><br>
 
   <div id="about" class="section">
-  <h2>About Me</h2>
-  <p>
-    I’m a <strong>Software Engineer</strong> with 4+ years of experience architecting scalable backend systems, building cloud-native applications, and integrating AI/ML models into production platforms. At <strong>Bank of America</strong>, I engineered distributed pipelines with <strong>Spring Boot</strong> and <strong>Ansible</strong>, accelerating release cycles and boosting developer productivity by 40%.
-  </p>
-  <p>
-    I’m passionate about combining algorithms with system design to deliver robust, real-world solutions. I thrive on deploying intelligent architectures that balance scalability, performance, and reliability.
-  </p>
-  <p>
-    Currently pursuing a <strong>Master’s in Computer Science</strong> at Indiana University Bloomington (<strong>GPA 3.67</strong>), I focus on intelligent infrastructure and cloud-native systems. My work on <strong>Credify</strong>, a blockchain-powered reusable identity verification platform, earned me 2nd runner-up at the InnoQuest Innovation Challenge.
-  </p>
-  <p>
-    This summer, I’m a participant in <strong>The Mill’s Startup Summer Accelerator</strong>, leading <span style="color:#0078D7"><strong>product management, technical architecture, and customer discovery</strong></span> for an early-stage venture. This experience has sharpened my entrepreneurial mindset, strengthened my leadership abilities, and taught me to iterate rapidly from MVP to validation.
-  </p>
-  <p>
-    Beyond engineering, I’m a strong advocate of <strong>effective communication</strong> and team collaboration. I’ve held <strong>leadership roles</strong> in <strong>Toastmasters International</strong> as a division-level contest judge and mentor, and in <strong>Guindy Times</strong>, where I led editorial teams and honed people management skills. These experiences have shaped me into a professional who blends <strong>technical depth with entrepreneurial and interpersonal effectiveness</strong>.
-  </p>
- </div>
+    <h2>About Me</h2>
+    <p>
+      I’m a <strong>Software Engineer</strong> with 4+ years of experience architecting scalable backend systems, building cloud-native applications, and integrating AI/ML models into production platforms. At <strong>Bank of America</strong>, I engineered distributed pipelines with <strong>Spring Boot</strong> and <strong>Ansible</strong>, accelerating release cycles and boosting developer productivity by 40%.
+    </p>
+    <p>
+      I’m passionate about combining algorithms with system design to deliver robust, real-world solutions. I thrive on deploying intelligent architectures that balance scalability, performance, and reliability.
+    </p>
+    <p>
+      Currently pursuing a <strong>Master’s in Computer Science</strong> at Indiana University Bloomington (<strong>GPA 3.67</strong>), I focus on intelligent infrastructure and cloud-native systems. My work on <strong>Credify</strong>, a blockchain-powered reusable identity verification platform, earned me 2nd runner-up at the InnoQuest Innovation Challenge.
+    </p>
+    <p>
+      This summer, I’m a participant in <strong>The Mill’s Startup Summer Accelerator</strong>, leading <span style="color:#0078D7"><strong>product management, technical architecture, and customer discovery</strong></span> for an early-stage venture. This experience has sharpened my entrepreneurial mindset, strengthened my leadership abilities, and taught me to iterate rapidly from MVP to validation.
+    </p>
+    <p>
+      Beyond engineering, I’m a strong advocate of <strong>effective communication</strong> and team collaboration. I’ve held <strong>leadership roles</strong> in <strong>Toastmasters International</strong> as a division-level contest chair and voting judge, and in <strong>Guindy Times</strong>, where I led editorial teams and honed people management skills. These experiences have shaped me into a professional who blends <strong>technical depth with entrepreneurial and interpersonal effectiveness</strong>.
+    </p>
+  </div>
 
   <!-- Experience -->
+    <!-- Experience -->
   <div id="experience" class="section">
     <h2>Experience</h2>
+
+    <!-- Startup Summer Accelerator -->
     <div class="experience">
       <h3>Startup Summer Accelerator Participant</h3>
       <div class="meta">
         <span>The Mill</span>
         <span class="location">Bloomington, Indiana, United States</span>
-        <span class="date">Jun 2025 – Present · 2 mos</span>
+        <span class="date">Jun 2025 – Jul 2025</span>
       </div>
       <ul>
-        <li>Selected for The Mill’s Startup Summer Accelerator to lead validation and technical execution of an early-stage venture.</li>
-        <li>Driving MVP architecture, product development, and customer discovery with iterative feedback loops.</li>
-        <li>Refining the venture’s pitch and business model as ideator and technical lead.</li>
-    </ul>
-<div class="tech-stack no-wrap">
-  <span class="badge">React</span>
-  <span class="badge">Spring Boot</span>
-  <span class="badge">Product Strategy</span>
-  <span class="badge">Agile Delivery</span>
-  <span class="badge">Cross-functional Team Leadership</span>
-  <span class="badge">Stakeholder Management</span>
-  <span class="badge">Customer Discovery</span>
-</div>
-</div>
+        <li>Selected for a competitive accelerator as one of a few venture founders; led early-stage product development.</li>
+        <li>Conducted user research and market validation, translating insights into actionable requirements.</li>
+        <li>Converted Figma designs into responsive React components, accelerating MVP development and iteration.</li>
+      </ul>
+      <div class="tech-stack">
+        <span>Product Strategy</span><span>Customer Discovery</span><span>React</span><span>Agile Delivery</span>
+      </div>
+    </div>
 
+    <!-- Senior Software Engineer -->
     <div class="experience">
       <h3>Senior Software Engineer</h3>
       <div class="meta">
@@ -314,23 +278,21 @@
         <span class="date">Mar 2022 – Jul 2024</span>
       </div>
       <ul>
-        <li>Designed and implemented a bulk patching system for over 260,000 middleware instances, achieving 99.99% uptime and eliminating downtime across environments.</li>
-        <li>Spearheaded automation of legacy system migrations using Ansible, reducing configuration time by 80% and ensuring security compliance.</li>
-        <li>Built and maintained a Java-based release automation tool integrated with JFrog Artifactory.</li>
-        <li>Led GIS Scan Automation for Code-a-thon’23, reducing manual security validation by 90% and earning the Silver Award.</li>
-        <li>Implemented comprehensive test automation with Java, Cucumber, and Jenkins, improving CI/CD reliability.</li>
+        <li>Engineered enterprise-scale patching system for 260K+ middleware instances, achieving 99.99% uptime; awarded Bronze for Operational Excellence.</li>
+        <li>Automated infrastructure migration with Ansible, reducing manual configuration time by 80%.</li>
+        <li>Developed Java-based release automation tool integrated with JFrog Artifactory, boosting CI/CD throughput by 40%.</li>
+        <li>Built Tableau dashboards for developer productivity and integrated Jenkins dashboards, reducing triage time by 60%.</li>
+        <li>Implemented Spring Boot microservices for certificate lifecycle management.</li>
+        <li>Spearheaded Code-a-thon GIS Scan Automation, cutting manual security validation by 90% and winning the Silver Award.</li>
+        <li>Collaborated with product teams on a cloud-native SaaS infrastructure platform for enterprise adoption.</li>
       </ul>
-   <div class="tech-stack no-wrap">
-  <span class="badge">Java</span>
-  <span class="badge">Spring Boot</span>
-  <span class="badge">Ansible</span>
-  <span class="badge">Jenkins</span>
-  <span class="badge">JFrog Artifactory</span>
-  <span class="badge">MySQL</span>
-  <span class="badge">CI/CD</span>
-</div>
- </div>
+      <div class="tech-stack">
+        <span>Java</span><span>Spring Boot</span><span>Ansible</span><span>Jenkins</span>
+        <span>JFrog Artifactory</span><span>Tableau</span><span>CI/CD</span><span>AWS</span>
+      </div>
+    </div>
 
+    <!-- Senior Tech Associate -->
     <div class="experience">
       <h3>Senior Tech Associate</h3>
       <div class="meta">
@@ -339,22 +301,13 @@
         <span class="date">Jul 2020 – Feb 2022</span>
       </div>
       <ul>
-        <li>Designed and deployed CI/CD pipelines for infrastructure provisioning, cutting release cycles by 50% through automated build, test, and deployment workflows.</li>
-        <li>Led server provisioning and configuration automation under hybrid Agile-Waterfall environments for enterprise applications.</li>
-        <li>Delivered secure and efficient software packaging, distribution, and production deployments with 100% on-time delivery.</li>
-        <li>Improved operational efficiency by developing shell scripts and Dockerized workflows for legacy application transitions.</li>
-        <li>Provided technical mentorship to junior engineers on automation best practices and DevOps tooling.</li>
+        <li>Designed CI/CD pipeline architecture, reducing deployment time by 50%.</li>
+        <li>Managed server provisioning with 100% on-time delivery.</li>
+        <li>Automated packaging workflows, boosting release velocity by 25%.</li>
+        <li>Performed troubleshooting and system analysis across multiple environments.</li>
+        <li>Coordinated enterprise application releases, ensuring production stability.</li>
       </ul>
-      </ul>
-<div class="tech-stack">
-  <span class="badge">QC Issue Resolution</span>
-  <span class="badge">Server Issue Analysis</span>
-  <span class="badge">Lower Lane Deployment & Testing</span>
-  <span class="badge">Git & Version Control</span>
-  <span class="badge">CI/CD Pipeline Optimization</span>
-  <span class="badge">Deployment Automation</span>
-  <span class="badge">Excel for Reporting & Analytics</span>
-</div>
+      <div class="tech-stack"> <span class="badge">QC Issue Resolution</span> <span class="badge">Server Issue Analysis</span> <span class="badge">Lower Lane Deployment & Testing</span> <span class="badge">Git & Version Control</span> <span class="badge">CI/CD Pipeline Optimization</span> <span class="badge">Deployment Automation</span> <span class="badge">Excel for Reporting & Analytics</span> </div>
     </div>
   </div>
 
@@ -364,40 +317,235 @@
 
     <div class="project">
       <h3>EcoBer – Carbon-Aware Ridesharing Platform</h3>
-      <div class="pill">Real-time Matching</div>
-      <div class="pill">Carbon Scoring</div>
-      <div class="pill">High Concurrency</div>
-      <p>EcoBer is a ridesharing backend designed with a focus on geospatial intelligence and eco-conscious transportation. Built with Java (Spring Boot) and deployed on AWS Elastic Beanstalk.</p>
+      <div class="pill">Real-time Matching</div><div class="pill">Carbon Scoring</div><div class="pill">High Concurrency</div>
+      <p>As someone who has always had minimalist urges in life, I’ve been naturally drawn to optimization and the idea of doing more with less. When I began replicating Uber’s design to understand the nuances of large-scale ride-sharing systems, I couldn’t help but give it an eco-friendly twist. That exploration eventually evolved into EcoBer — a ridesharing backend that integrates geospatial intelligence with eco-conscious decision making. Built in Java (Spring Boot) and deployed on AWS Elastic Beanstalk, EcoBer demonstrates how scalable system design can also prioritize sustainability</p>
       <p><strong>System Highlights:</strong></p>
       <ul>
-    <li>Designed and deployed a scalable backend for a ride-sharing platform using Spring Boot and AWS Elastic Beanstalk.</li>
-    <li>Implemented driver matching with Haversine distance, Redis caching fallback, and vehicle type filters.</li>
-    <li>Developed a carbon scoring algorithm and eco-reports to incentivize sustainable transportation.</li>
-    <li>Configured health monitoring, auto schema creation, and resolved deployment challenges in AWS environments.</li>
-  </ul>
-<div class="tech-stack">
+        <li>Scalable Spring Boot backend on AWS Elastic Beanstalk.</li>
+        <li>Driver matching with Haversine distance, Redis caching fallback, vehicle-type filters.</li>
+        <li>Carbon scoring algorithm and eco-reports to incentivize sustainable rides.</li>
+        <li>Health monitoring and auto schema creation with AWS configuration fixes.</li>
+      </ul>
+      <div class="tech-stack">
         <span>Java</span><span>Spring Boot</span><span>AWS</span><span>Redis</span><span>MySQL</span>
       </div>
-      <a href="https://bitbucket.org/av_codeforge/ecober/" class="repo-link">View Repository</a>
+      <a href="https://bitbucket.org/av_codeforge/ecober/" class="repo-link" target="_blank" rel="noopener">View Repository</a>
     </div>
 
     <div class="project">
       <h3>Graphlix – GNN-based Movie Recommendation System</h3>
-      <div class="pill">Graph Neural Networks</div>
-      <div class="pill">ML Pipeline</div>
-      <div class="pill">Interactive UI</div>
-      <p>Graphlix is a prototype recommendation engine that uses Graph Neural Networks (GNNs) to suggest movies based on user preferences. A proof-of-concept demonstrating GNN capabilities.</p>
-      <p><strong>Implementation:</strong></p>
-      <ul>
-  <li>Trained Graph Neural Networks on MovieLens dataset using BPR loss to optimize personalized movie ranking.</li>
-  <li>Benchmarked Enhanced NGCF against Matrix Factorization and LightGCN baselines using NDCG@10 and MAP@10 metrics.</li>
-  <li>Developed a Flask API for serving recommendations and a React frontend for dynamic, user-personalized suggestions.</li>
-  <li>Implemented stratified sampling and attention mechanisms to improve ranking quality and stabilize training.</li>
-</ul><div class="tech-stack">
+      <div class="pill">Graph Neural Networks</div><div class="pill">ML Pipeline</div><div class="pill">Interactive UI</div>
+      <p>Graphlix started as a course project, but it quickly became a deep dive into the promise and limitations of Graph Neural Networks (GNNs) in recommendation systems. While I was intrigued by the potential of GNNs, I also realized why they remain more of an academic curiosity than a full-fledged tool at scale in companies like Netflix. Through the project, I explored matrix factorization and its shortcomings, experimented with LightGCN, and saw how even small tweaks like adding non-linearity could shift recommendation quality.
+
+Though not a groundbreaking innovation, Graphlix was my attempt to bridge theory and practice: I built a functioning GNN-based recommender, evaluated it against baselines, and even added a near real-time recommendation pipeline to tackle the cold-start problem. It was a lesson in not just building models, but also in understanding the gap between research papers and production-ready systems.</p>
+<b><p>System Highlights:</p></b>
+              
+<ul><li>Trained GNNs on MovieLens with BPR loss; compared against MF and LightGCN (NDCG@10, MAP@10).</li>
+        <li>Flask API for serving recs; React frontend for user-personalized results.</li>
+        <li>Stratified sampling and attention mechanisms for stable ranking quality.</li>
+      </ul>
+      <div class="tech-stack">
         <span>Python</span><span>TensorFlow</span><span>Flask</span><span>React</span><span>GNN</span><span>Machine Learning</span>
       </div>
-      <a href="https://bitbucket.org/av_codeforge/graphlix/" class="repo-link">View Repository</a>
+      <a href="https://bitbucket.org/av_codeforge/graphlix/" class="repo-link" target="_blank" rel="noopener">View Repository</a>
     </div>
   </div>
+
+  <!-- Leadership & Extracurriculars -->
+  <div id="others" class="section">
+    <h2>Leadership & Extracurriculars</h2>
+        <div class="experience">
+      <h3>Women Who Code Intern</h3>
+      <div class="meta">
+        <span>IU Center of Excellence for Women & Technology, Indiana University Bloomington</span>
+        <span class="location">Hybrid</span>
+        <span class="date">April 2025 – Present</span>
+      </div>
+      <ul>
+        <li>Selected as one of two interns to support Women Who Code initiatives.</li>
+        <li>Orchestrating workshops and events to foster community engagement.</li>
+        <li>Helping promote upcoming Women Who Code events across channels to maximize participation.</li>
+      </ul>
+      <div class="tech-stack">
+        <span>Community Engagement</span><span>Event Promotion</span><span>Workshop Facilitation</span>
+      </div>
+    </div>
+
+    <!-- Toastmasters -->
+    <div class="experience">
+      <h3>Member</h3>
+      <div class="meta">
+        <span>Toastmasters International</span>
+        <span class="location">Chennai, Tamil Nadu, India</span>
+        <span class="date">Jan 2023 – Jul 2024 · 1 yr 7 mos</span>
+      </div>
+      <ul>
+        <li>Area-level humorous speech contest second runner-up.</li>
+        <li>Division-level Table Topics Contest – Contest Chair.</li>
+        <li>Sergeant-at-Arms for club and area-level contests (setup & logistics).</li>
+        <li>Voting judge for International Speech and Table Topics at area/division levels.</li>
+      </ul>
+      <div class="tech-stack">
+        <span>Public Speaking</span><span>Event Management</span><span>Leadership</span>
+      </div>
+    </div>
+
+    <div class="experience">
+      <h3>Vice President Public Relations</h3>
+      <div class="meta">
+        <span>Toastmasters International</span>
+        <span class="location">Bank of America Chennai, Tamil Nadu, India</span>
+        <span class="date">Jul 2023 – Dec 2023 · 6 mos</span>
+      </div>
+      <ul>
+        <li>Authored internal blogs summarizing educational sessions, improving post-event engagement.</li>
+        <li>Designed weekly posters to promote meetings/contests, boosting attendance and retention.</li>
+        <li>Received Bronze Award for leadership and contributions to internal communications.</li>
+      </ul>
+      <div class="tech-stack">
+        <span>Content Strategy</span><span>Internal Communications</span><span>Brand Outreach</span>
+      </div>
+    </div>
+
+    <!-- The Guindy Times -->
+    <div class="experience">
+      <h3>Executive Editor</h3>
+      <div class="meta">
+        <span>The Guindy Times</span>
+        <span class="location">Chennai, Tamil Nadu, India</span>
+        <span class="date">Mar 2019 – Aug 2020 · 1 yr 6 mos</span>
+      </div>
+      <ul>
+        <li>Selected as <strong>one of two Executive Editors</strong>; led four deputy editors and cross-team contributors.</li>
+        <li>Owned article allocation, editorial QA, and timelines for <em>Intern Diaries 2.0</em> and the biannual print edition.</li>
+        <li>Coordinated interviews end-to-end with writers, designers, and photographers.</li>
+      </ul>
+      <div class="tech-stack">
+        <span>Editorial Leadership</span><span>Content Strategy</span><span>Cross-functional Coordination</span>
+      </div>
+    </div>
+
+    <div class="experience">
+      <h3>Deputy Editor</h3>
+      <div class="meta">
+        <span>The Guindy Times</span>
+        <span class="location">Chennai, Tamil Nadu, India</span>
+        <span class="date">Apr 2018 – Mar 2019 · 1 yr</span>
+      </div>
+      <ul>
+        <li>Edited technical and general articles across CEG, ACTECH, and SAP in a deadline-driven environment.</li>
+        <li>Contributed to the <em>Intern Diaries</em> series by editing interview reports.</li>
+        <li>Edited content for the club’s biannual print editions.</li>
+      </ul>
+      <div class="tech-stack">
+        <span>Editing</span><span>Time Management</span><span>Quality Assurance</span><span>Print Production</span>
+      </div>
+    </div>
+  </div>
+
+    <!-- Publications & Articles -->
+  <div id="publications" class="section">
+    <h2>Publications & Articles</h2>
+
+    <h3>Tech Musings</h3>
+    <div class="articles-grid">
+
+      <div class="article-card">
+        <a href="https://medium.com/@rememberaddy2905/adding-a-pinch-of-algorithmic-constraints-to-system-design-1748772645f0" target="_blank" rel="noopener">
+          <div class="no-thumb">Medium</div>
+        </a>
+        <a class="title" href="https://medium.com/@rememberaddy2905/adding-a-pinch-of-algorithmic-constraints-to-system-design-1748772645f0" target="_blank" rel="noopener">
+          Adding a Pinch of Algorithmic Constraints to System Design
+        </a>
+        <div class="role">Technical Blog · Medium</div>
+      </div>
+
+      <div class="article-card">
+        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7321617342642184192/" target="_blank" rel="noopener">
+          <div class="no-thumb">LinkedIn</div>
+        </a>
+        <a class="title" href="https://www.linkedin.com/feed/update/urn:li:activity:7321617342642184192/" target="_blank" rel="noopener">
+          LinkedIn Technical Post 1
+        </a>
+        <div class="role">Technical Post · LinkedIn</div>
+      </div>
+
+      <div class="article-card">
+        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7304633508910481408/" target="_blank" rel="noopener">
+          <div class="no-thumb">LinkedIn</div>
+        </a>
+        <a class="title" href="https://www.linkedin.com/feed/update/urn:li:activity:7304633508910481408/" target="_blank" rel="noopener">
+          LinkedIn Technical Post 2
+        </a>
+        <div class="role">Technical Post · LinkedIn</div>
+      </div>
+
+    </div>
+
+    <!-- Creative Writing -->
+    <h3>Creative Writing</h3>
+    <div class="articles-grid">
+
+      <div class="article-card">
+        <a href="https://medium.com/@rememberaddy2905/leadership-lessons-with-the-queen-elizabeth-ii-50dec5091a37" target="_blank" rel="noopener">
+          <div class="no-thumb">Medium</div>
+        </a>
+        <a class="title" href="https://medium.com/@rememberaddy2905/leadership-lessons-with-the-queen-elizabeth-ii-50dec5091a37" target="_blank" rel="noopener">
+          Leadership Lessons with Queen Elizabeth II
+        </a>
+        <div class="role">Personal Essay · Medium</div>
+      </div>
+
+      <div class="article-card">
+        <a href="https://medium.com/@rememberaddy2905/a-desperate-attempt-to-be-funny-8d597a2d8902" target="_blank" rel="noopener">
+          <div class="no-thumb">Medium</div>
+        </a>
+        <a class="title" href="https://medium.com/@rememberaddy2905/a-desperate-attempt-to-be-funny-8d597a2d8902" target="_blank" rel="noopener">
+          An Attempt to be Funny
+        </a>
+        <div class="role">Humor Piece · Medium</div>
+      </div>
+
+
+    </div>
+        <!-- Journalism & Reporting -->
+    <h3>Journalism & Reporting</h3>
+    <div class="articles-grid">
+
+      <div class="article-card">
+        <a href="https://guindytimes.com/articles/decide-prepare-and-pursue-says-gayatri-intern-diaries" target="_blank" rel="noopener">
+          <div class="no-thumb">Guindy Times</div>
+        </a>
+        <a class="title" href="https://guindytimes.com/articles/decide-prepare-and-pursue-says-gayatri-intern-diaries" target="_blank" rel="noopener">
+          Decide, Prepare and Pursue – Says Gayatri (Intern Diaries)
+        </a>
+        <div class="role">Interview Feature · The Guindy Times</div>
+      </div>
+
+      <div class="article-card">
+        <a href="https://guindytimes.com/articles/the-business-tycoon-with-six-packs-dr-sam-paul-enantra-2019" target="_blank" rel="noopener">
+          <div class="no-thumb">Guindy Times</div>
+        </a>
+        <a class="title" href="https://guindytimes.com/articles/the-business-tycoon-with-six-packs-dr-sam-paul-enantra-2019" target="_blank" rel="noopener">
+          The Business Tycoon with Six-Packs – Dr. Sam Paul (Enantra 2019)
+        </a>
+        <div class="role">Interview Profile · The Guindy Times</div>
+      </div>
+
+      <div class="article-card">
+        <a href="https://guindytimes.com/articles/a-report-on-teachers-day" target="_blank" rel="noopener">
+          <div class="no-thumb">Guindy Times</div>
+        </a>
+        <a class="title" href="https://guindytimes.com/articles/a-report-on-teachers-day" target="_blank" rel="noopener">
+          A Report on Teachers’ Day
+        </a>
+        <div class="role">Event Report · The Guindy Times</div>
+      </div>
+
+    </div>
+
+  </div>
+
+
 </body>
 </html>
